@@ -1,0 +1,228 @@
+/*
+ * Quick Info
+ * Chosen responsive breakpoints; 800px, 600px
+ * Main heading font size: 2 rem
+ * Secondary heading font size: 2rem
+ * Primary unit: rem
+ * Primary Colors: hsl(179, 62%, 43%), hsl(71, 73%, 54%)
+ * Neutral Colors: #e5eff5, hsl(218, 22%, 67%), #fff
+ */
+
+// Theme Color Variables //
+// Primary Colors
+$color-primary-one: hsl(179, 62%, 43%);
+$color-primary-two: hsl(71, 73%, 54%);
+// Neutral Colors
+$color-neutral-one: hsl(204, 43%, 93%);
+$color-neutral-two: hsl(218, 22%, 67%);
+$color-white: #fff;
+
+// RESPONSIVE BREAKPOINTS
+$bp-medium: 50em; // 50 * 16px = 800px
+$bp-small: 37.5em; // 37.5 * 16px = 600px
+
+html {
+  /* Set the rem (root em) unit for relative sizing. 1rem = 10px (62.5% * 16px) */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Karla", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.4;
+  color: $color-neutral-one;
+  background-color: $color-neutral-one;
+}
+
+/* Typography */
+/* The two headings both designated h1 for SEO reasons; and to be compliant with only having 1 h1 heading on a page */
+.heading-primary {
+  font-size: 2rem;
+  margin: 0;
+
+  &--main {
+    color: $color-primary-one;
+    display: block;
+    margin-bottom: 2rem;
+  }
+
+  &--sub {
+    color: $color-primary-two;
+    font-size: 1.6rem;
+    display: block;
+  }
+}
+
+.heading-secondary {
+  color: $color-neutral-one;
+  font-weight: 400;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    margin-top: 0;
+  }
+}
+
+/* Margin reset on paragraphs */
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+/* Layout Design */
+.container {
+  max-height: 100vh; /* In order to size the CSS grid rows to center the price grid */
+
+  display: grid; /* 3 columns and 3 rows with center column as content grid item */
+  grid-template-columns:
+    [full-start] minmax(6rem, 1fr) [center-start] minmax(min-content, 6fr) [center-end] minmax(6rem, 1fr)
+    [full-end];
+  grid-template-rows: repeat(3, 1fr);
+
+  @media only screen and (max-width: $bp-medium) {
+    /* resize of top and bottom rows on smaller viewports where height exceeds 100vh */
+    grid-template-rows: 8rem 1fr 8rem;
+    max-height: none;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    /* resize of end column widths on viewport widths smaller than 800px  */
+    grid-template-columns:
+      [full-start] 2rem [center-start] minmax(min-content, 6fr) [center-end] 2rem
+      [full-end];
+  }
+}
+
+/* Component Design */
+.signup {
+  /* 4 * 4 grid with equal parts */
+  grid-column: center-start / center-end;
+  grid-row: 2 / 3;
+  justify-self: center;
+
+  display: grid;
+  grid-template-columns: repeat(2, 32.5rem);
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: 1fr;
+  }
+
+  &__call-to-action {
+    padding: 4rem 4rem 2.5rem;
+    grid-column: 1 / 3;
+    color: $color-neutral-two;
+    background-color: $color-white;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    overflow: hidden;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / 2;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 2.5rem;
+    }
+  }
+
+  &__submit {
+    padding: 2.5rem 4rem;
+    background-color: $color-primary-one;
+    border-bottom-left-radius: 5px;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / 2;
+      border-bottom-left-radius: 0;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 2.5rem;
+    }
+  }
+
+  &__price {
+    display: flex;
+
+    &-amount {
+      font-size: 3.5rem;
+      font-weight: 700;
+      padding-right: 1rem;
+    }
+
+    &-period {
+      align-self: center;
+      color: rgba($color-neutral-one, 0.6);
+    }
+  }
+
+  &__catch {
+    margin: 0.5rem 0 3rem;
+  }
+
+  &__benefits {
+    padding: 2.5rem 4rem;
+    background-color: rgba($color-primary-one, 0.9);
+    border-bottom-right-radius: 5px;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-column: 1 / 2;
+      border-bottom-left-radius: 5px;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 2.5rem;
+    }
+
+    & ul {
+      padding-left: 0;
+      & li {
+        list-style: none;
+        color: rgba($color-neutral-one, 0.8);
+      }
+    }
+  }
+}
+
+footer {
+  grid-column: 1 / 3;
+  justify-self: center;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: $color-neutral-two;
+
+  & a {
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+  }
+}
+
+/* Sign Up button styling */
+.btn {
+  &,
+  &:link,
+  &:visited {
+    text-transform: capitalize;
+    text-decoration: none;
+    padding: 1.4rem;
+    display: block;
+    text-align: center;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:active {
+    transform: translateY(0);
+  }
+
+  &-primary {
+    background-color: $color-primary-two;
+    color: $color-white;
+  }
+}
