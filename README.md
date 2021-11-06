@@ -1,11 +1,11 @@
 # Frontend Mentor - Single price grid component solution 👋🏾
 
-This the [Single price grid component](design/desktop-preview.jpg). Thanks for checking it out
+This the [Single price grid component](design/desktop-preview.png). Thanks for checking it out
 
 ## Table of contents 🧳
 
 - [Overview](#overview)
-  - [The challenge](#the-challenge)
+  - [The objective](#the-objective)
   - [Screenshot](#screenshot)
   - [Links](#links)
 - [My process](#my-process)
@@ -13,8 +13,6 @@ This the [Single price grid component](design/desktop-preview.jpg). Thanks for c
   - [What I learned](#what-i-learned)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-
-**Note: Delete this note and update the table of contents based on what sections you keep.**
 
 ## Overview
 
@@ -33,8 +31,8 @@ Users are be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://github.com/franco2ke/single-price-grid-component)
-- Live Site URL: [Add live site URL here](https://franco2ke.github.io/single-price-grid-component/)
+- Solution URL: [https://github.com/franco2ke/single-price-grid-component](https://github.com/franco2ke/single-price-grid-component)
+- Live Site URL: [https://franco2ke.github.io/single-price-grid-component/](https://franco2ke.github.io/single-price-grid-component/)
 
 ## My process
 
@@ -74,7 +72,7 @@ I also found writing the readme and inserting code comments, slightly challengin
 
 ## Author
 
-- Website - [Francis Wafula](https://www.paon.co.ke)
+- Website - [https://www.paon.co.ke](https://www.paon.co.ke)
 - Frontend Mentor - [@franco2ke](https://www.frontendmentor.io/profile/franco2ke)
 - Twitter - [@franco2ke](https://twitter.com/franco2ke)
 
