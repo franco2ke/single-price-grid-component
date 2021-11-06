@@ -1,5 +1,7 @@
 # Frontend Mentor - Single price grid component solution 👋🏾
 
+![Desktop View](design/desktop-preview.png)
+
 This the [Single price grid component](design/desktop-preview.png). Thanks for checking it out
 
 ## Table of contents 🧳
@@ -28,6 +30,7 @@ Users are be able to:
 ### Screenshot
 
 ![Mobile View](design/mobile-design.png)
+
 
 ### Links
 
@@ -58,13 +61,13 @@ I learn't that CSS Grid seems to make work easier when setting up layouts, howev
 
 Also using the alpha transparency really helped with getting alternate display shades, for example the background color on the benefits section.
 
-I also found writing the readme and inserting code comments, slightly challenging though it is much easier as the README template has been provided and I'm comparing with readme's solutions posted by others.
-
 ```css
 .signup__benefits {
   background-color: rgba(42, 178, 175, 0.9);
 }
 ```
+
+I also found writing the readme and inserting code comments, slightly challenging though it is much easier as the README template has been provided and I'm comparing with README's from solutions posted by others.
 
 ### Useful resources
 
